@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ChatWithFirebase_N</string>
+    <string name="write_your_message">write your message</string>
+    <string name="app_name">CHAT</string>
 </resources>
