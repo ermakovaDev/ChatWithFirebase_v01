@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "309098558454-77b78r3sbvccg36cjjpl2ej9loubbf1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.chronick.chatwithfirebase_n",
+            "certificate_hash": "11e74552ff3520fa92c5c0c38b60897fa817146f"
+          }
+        },
+        {
           "client_id": "309098558454-epuboatc8knoi7rbh2fi1u3uajlltlg7.apps.googleusercontent.com",
           "client_type": 3
         }
