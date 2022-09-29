@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "309098558454",
+    "firebase_url": "https://mychat-9dd42-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mychat-9dd42",
+    "storage_bucket": "mychat-9dd42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309098558454:android:241f897a2f4b88c41acdd7",
+        "android_client_info": {
+          "package_name": "me.chronick.chatwithfirebase_n"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309098558454-epuboatc8knoi7rbh2fi1u3uajlltlg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcEMULFxxvnnjqcLrE9ZPnVsypXr384Ek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309098558454-epuboatc8knoi7rbh2fi1u3uajlltlg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
