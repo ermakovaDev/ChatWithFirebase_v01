@@ -36,26 +36,30 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:alpha="0.5"
+                android:contentDescription="@string/todo"
                 android:src="@drawable/ic_baseline_person_pin_24" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Google Login"
+                android:text="@string/google_login"
                 android:textAlignment="center"
                 android:textSize="32sp" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/Signin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="30dp"
                 android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:id="@+id/Signin">
+                android:minHeight="48dp"
+                app:cardBackgroundColor="#03CEBA"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -67,17 +71,18 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="start"
-                        android:src="@drawable/google_button"
-                        android:layout_marginEnd="5dp"/>
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/todoist"
+                        android:src="@drawable/google_button" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Sign in with Google"
+                        android:text="@string/sign_in_with_google"
                         android:textAlignment="center"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/white"/>
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 

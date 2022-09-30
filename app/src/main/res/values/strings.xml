@@ -1,4 +1,10 @@
 <resources>
     <string name="write_your_message">write your message</string>
     <string name="app_name">CHAT</string>
+    <string name="send">send</string>
+    <string name="logout">logout</string>
+    <string name="google_login">Google Login</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="todo">TODO</string>
+    <string name="todoist">TODO</string>
 </resources>
