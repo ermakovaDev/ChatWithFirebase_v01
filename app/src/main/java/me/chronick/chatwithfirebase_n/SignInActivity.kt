@@ -49,9 +49,10 @@ class SignInActivity : AppCompatActivity() {
 
         binding.cardViewSignin.setOnClickListener{
             signInWithGoogle()
+            checkAuthState()
         }
 
-        checkAuthState()
+
     }
 
     private fun getClient(): GoogleSignInClient{
