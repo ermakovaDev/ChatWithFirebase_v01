@@ -41,8 +41,6 @@ class SignInActivity : AppCompatActivity() {
         binding.Signin.setOnClickListener{
             signInGoogle()
         }
-
-
     }
 
     private  fun signInGoogle(){
