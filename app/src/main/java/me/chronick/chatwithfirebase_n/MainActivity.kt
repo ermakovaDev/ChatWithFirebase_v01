@@ -1,8 +1,10 @@
 package me.chronick.chatwithfirebase_n
 
+import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -32,6 +34,15 @@ class MainActivity : AppCompatActivity() {
         binding.btnSend.setOnClickListener {
             myRef.setValue(binding.edtMessage.text.toString())
         }
+
+        binding.btnSignOut.setOnClickListener {
+            auth.signOut()
+                val intent = Intent(this, SignInActivity::class.java)
+                startActivity(intent)
+                finish()
+
+
+        }
         onChangeListener(myRef) // Path to listener
     }
 
@@ -40,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 binding.apply {
                     tvTextChat.append("\n")
-                    tvTextChat.append("MyComp: ${snapshot.value.toString()}")
+                    tvTextChat.append("${auth.currentUser?.displayName} : ${snapshot.value.toString()}")
                 }
             }
 

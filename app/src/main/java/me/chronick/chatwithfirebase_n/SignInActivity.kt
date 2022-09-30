@@ -49,10 +49,9 @@ class SignInActivity : AppCompatActivity() {
 
         binding.cardViewSignin.setOnClickListener{
             signInWithGoogle()
-            checkAuthState()
         }
 
-
+        checkAuthState()
     }
 
     private fun getClient(): GoogleSignInClient{
@@ -73,6 +72,7 @@ class SignInActivity : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener{
             if (it.isSuccessful){
                 Log.d("MyLog", "Google signIn ok")
+                checkAuthState()
             } else{
                 Log.d("MyLog", "Google signIn error")
             }
@@ -85,6 +85,7 @@ class SignInActivity : AppCompatActivity() {
             startActivity(i)
         }
     }
+
 }
 
 
