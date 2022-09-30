@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0F2F1"
     tools:context=".MainActivity">
 
     <Button
@@ -15,6 +16,8 @@
         android:background="@color/teal_700"
         android:backgroundTint="#00897B"
         android:text="send"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -24,9 +27,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:background="@android:drawable/editbox_background"
         android:ems="10"
-        android:hint= "@string/write_your_message"
+        android:hint="@string/write_your_message"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSend"
         app:layout_constraintEnd_toEndOf="@+id/btnSend"
         app:layout_constraintStart_toStartOf="@+id/btnSend" />
@@ -38,6 +45,8 @@
         android:layout_margin="10dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
