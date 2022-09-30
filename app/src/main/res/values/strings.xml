@@ -3,6 +3,8 @@
     <string name="app_name">CHAT</string>
     <string name="google_login">Google Login</string>
     <string name="sign_in_with_google">Sign in with Google Account</string>
-    <string name="todoist">TODO</string>
-    <string name="googleicon">googleIcon</string>
+    <string name="todo_ist">TODO</string>
+    <string name="google_icon">googleIcon</string>
+    <string name="send">send</string>
+    <string name="sign_out">sign out</string>
 </resources>

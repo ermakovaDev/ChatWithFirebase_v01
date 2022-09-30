@@ -12,14 +12,31 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/teal_700"
+        android:backgroundTint="#00897B"
+        android:text="@string/send"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_marginBottom="32dp"
         android:background="@color/teal_700"
         android:backgroundTint="#00897B"
-        android:text="send"
+        android:text="@string/sign_out"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -33,10 +50,12 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:textColorHint="#78909C"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSend"
         app:layout_constraintEnd_toEndOf="@+id/btnSend"
-        app:layout_constraintStart_toStartOf="@+id/btnSend" />
+        app:layout_constraintStart_toStartOf="@+id/btnSend"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/tvTextChat"

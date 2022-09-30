@@ -52,6 +52,7 @@ class SignInActivity : AppCompatActivity() {
             signInWithGoogle()
         }
 
+        checkAuthState()
     }
 
     private fun getClient(): GoogleSignInClient{
@@ -75,6 +76,13 @@ class SignInActivity : AppCompatActivity() {
             } else{
                 Log.d("MyLog", "Google signIn error")
             }
+        }
+    }
+
+    private fun checkAuthState(){
+        if (auth.currentUser != null){
+            val i = Intent(this, MainActivity::class.java)
+            startActivity(i)
         }
     }
 }
