@@ -16,7 +16,7 @@
         android:background="@android:drawable/dialog_holo_light_frame"
         android:backgroundTint="#00897B"
         android:text="@string/send"
-        android:textColor="#000000"
+        android:textColor="#546E7A"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,17 +41,17 @@
         app:layout_constraintStart_toStartOf="@+id/btnSend"
         android:autofillHints="" />
 
-    <TextView
-        android:id="@+id/tvTextChat"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:background="@android:drawable/editbox_background"
-        android:textSize="20sp"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/edtMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
