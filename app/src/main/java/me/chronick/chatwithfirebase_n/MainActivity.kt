@@ -4,7 +4,8 @@ import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import android.view.Menu
+import android.view.MenuItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -15,6 +16,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import me.chronick.chatwithfirebase_n.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,14 +37,6 @@ class MainActivity : AppCompatActivity() {
             myRef.setValue(binding.edtMessage.text.toString())
         }
 
-        binding.btnSignOut.setOnClickListener {
-            auth.signOut()
-                val intent = Intent(this, SignInActivity::class.java)
-                startActivity(intent)
-                finish()
-
-
-        }
         onChangeListener(myRef) // Path to listener
     }
 
@@ -54,9 +48,7 @@ class MainActivity : AppCompatActivity() {
                     tvTextChat.append("${auth.currentUser?.displayName} : ${snapshot.value.toString()}")
                 }
             }
-
             override fun onCancelled(error: DatabaseError) {
-
             }
         })
     }
@@ -69,7 +61,21 @@ class MainActivity : AppCompatActivity() {
             runOnUiThread{ // main thread
                 actionBar?.setDisplayHomeAsUpEnabled(true)
                 actionBar?.setHomeAsUpIndicator(drawableIcon)
+                actionBar?.title = auth.currentUser?.displayName
             }
         }.start()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.sign_out){
+            auth.signOut()
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
